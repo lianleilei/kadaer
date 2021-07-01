@@ -106,8 +106,8 @@
         <div class="portfolio-container text-center">
 
           <ul id="portfolio-grid" class="three-column">
-          @foreach($data['product'] as $vo)
-            <li class="portfolio-item wow fadeIn" data-wow-delay="0.1s" data-groups='["all", "print", "branding"]'>
+          @foreach($data['product'] as $key=>$vo)
+            <li class="portfolio-item wow fadeIn" data-wow-delay="0.{{$key+1}}s">
               <div class="portfolio gallery-image-hover">
                 <div class="dark-overlay"></div>
                 <img src="{{$vo->thumb}}" alt="">
